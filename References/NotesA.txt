@@ -1,0 +1,95 @@
+﻿A Hybrid CNN-LSTM Model for Improving Accuracy of Movie Reviews Sentiment Analysis
+
+Summaries:
+I. Bard
+Introduction:
+Natural language processing (NLP) is complex due to the conceptual and psychological nature of language. There are two main types of NLP applications: those focused on computational tasks like spell checking and machine translation, and those focused on mimicking human language like sentiment analysis and story generation.
+Sentiment analysis (SA) is a specific type of NLP that extracts and identifies subjective information and opinions from text. This includes determining the writer's attitude towards an entity as positive, negative, or neutral. SA is important because it transforms unstructured user reviews into useful information for businesses, individuals, and others.
+Social media provides a wealth of data for SA, including user reviews, opinions, and emotions. This data can be used to understand public sentiment towards products, organizations, individuals, and other entities.
+The text proposes a hybrid model for SA that combines recurrent, convolutional, and global max-pooling layers on pre-trained Word2Vec. This model aims to extract both local and long-term features from text for improved sentiment analysis accuracy.
+The text concludes by mentioning the challenges of SA, including parsing, labeling, and named entity recognition (NER), and suggests that these challenges can be addressed using machine learning and deep learning techniques.
+
+Related Work:
+ Summary of the text:
+Social media platforms generate a vast amount of data, presenting challenges for sentiment analysis (SA). This text reviews various machine learning and deep learning techniques used for SA, categorized into traditional and deep learning approaches.
+
+Traditional approaches:
+
+* Support Vector Machines (SVM), Random Forest (RF), and Naïve Bayesian (NB) are used for SA with good results.
+* Unsupervised deep learning techniques like paragraph2Vec are applied for feature extraction and outperform traditional methods like TF-IDF.
+* Logistic Regression is shown to perform well for Thai tweets.
+* SVM and NB are compared for Arabic text classification, with NB showing better accuracy and time efficiency.
+
+Deep learning approaches:
+* Convolutional Neural Networks (CNNs) are used for visual SA and sentiment analysis of micro-blogs.
+* Deep Belief Networks with Feature Selection (DBNFS) are proposed to address vocabulary problems.
+* A combination of CNN and Word2Vec achieves better accuracy than other neural networks.
+* ConvLstm, combining CNN and LSTM, achieves efficient results with less convolutional layers.
+* VDCNN, operating at character level with small convolutions and pooling, shows performance improvement with increasing depth.
+* Bi-LSTM-CRF and aspect-based LSTM with conditional random field classifier achieve improvements in aspect-based sentiment analysis.
+* Two-Parse algorithm and weighted K-NN classifier are proposed for polarity classification.
+* Gini Index feature selection with SVM improves classification accuracy for movie reviews.
+Overall, the text highlights the effectiveness of deep learning techniques in sentiment analysis, particularly for social media data. It also emphasizes the importance of feature selection and pre-trained word vectors for improved performance.
+
+Background of the Deep Learning Model
+A. Word2Vec
+Word2Vec, a deep learning model developed by Google in 2013, creates vector representations for words based on their meaning and context in sentences. This allows Word2Vec to compute distances between words and estimate their meaning with high accuracy, even for large datasets.
+Key points:
+* Word2Vec utilizes pre-trained vectors from the Google News dataset.
+* Dropout technique prevents overfitting and improves performance by dropping irrelevant information.
+* Word2Vec can effectively find similar words based on their vector representations.
+* CNNs require a fixed input size, meaning the number of words in a sentence must remain the same throughout the network.
+B. CNN
+
+## Summary of the text:
+Convolutional Neural Networks (CNNs) are a type of neural network originally developed for image processing but effective in text classification as well. Their unique structure allows them to extract features from text data.
+
+**Key points:**
+* CNN layers are called "feature maps" because they connect a subset of the input to their preceding layers.
+* Polling layers are used to reduce the computational complexity of the model by shrinking the output size while preserving important information.
+* Max-pooling is the most common polling technique, where the maximum value within a window is used.
+* A flattened layer maps the output of the polling layer to the next layer.
+* The final layer in a CNN is typically fully connected.
+
+C. RNN
+Summary of the text:
+The proposed model utilizes a special type of Recurrent Neural Network (RNN) called Long Short-Term Memory (LSTM). Unlike standard RNNs, which struggle with long-term dependencies, LSTMs can effectively handle these dependencies through three different gates:
+* **Forget gate:** Decides what information to forget from the previous state
+* **Input Gate:** Decides what new information to add to the current state
+* **Output Gate:** Decides what information to output from the current state
+These gates allow LSTMs to learn long-term dependencies and perform well on tasks that rely on sequential data, such as text classification.
+Key points:
+* Standard RNNs process information sequentially and remember information for further processing.
+* LSTMs are a special type of RNN designed to address the vanishing gradient problem.
+* LSTMs use three gates to regulate and preserve information in each node state.
+* The architecture of LSTMs is chain-like and similar to RNNs but utilizes gates for better memory management.
+Equations:
+* Equation 1: General RNN model (ht, fw, wh, xt)
+* Equation 2: RNN activation function (tanh, wh, xt)
+* Equations 3-6: Explanation of LSTM gates and cells
+Results and Discussion:
+Summary of the text:
+The authors propose a hybrid deep learning model combining Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) for sentiment analysis. They compare their model to other techniques on two datasets: IMDB movie reviews and Amazon movie reviews.
+Key findings:
+* The proposed hybrid model improves f-measure score by 4-8% compared to individual CNN and LSTM models on the IMDB dataset.
+* The hybrid model utilizes 10 convolutional layers for efficient local information extraction.
+* The hybrid model achieves higher accuracy than traditional approaches like Naive Bayes (NB), Support Vector Machines (SVM), and Genetic Algorithm (GA) on IMDB data.
+* The hybrid model outperforms traditional machine learning techniques on the Amazon movie review dataset.
+* The dropout technique improves execution time of the model.
+* The proposed model shows comparable or better performance than existing deep learning models on both datasets.
+Figures:
+* Figure 6: Shows f-measure, recall, and precision of various models on IMDB and Amazon datasets.
+* Figure 7: Shows accuracy comparison of the hybrid model with traditional approaches on IMDB data.
+ 
+Overview:
+The main challenge in Natural Language Processing (NLP) is developing algorithms that understand the hierarchical structure of sentences. Traditional Convolutional Neural Networks (CNNs) have been used for sentiment analysis (SA), with recent improvements employing multiple layers for extracting information from hierarchical data. However, reducing network size remains a focus of research.
+Key points:
+* Research has explored reducing network size by replacing fully connected layers with average pooling and weight sharing.
+* This study compares traditional and deep learning methods for SA on benchmark datasets.
+* Binary weights are used to reduce memory consumption.
+* The proposed Hybrid CNN-LSTM model achieves comparable or better performance than existing techniques.
+* The model uses global max-pooling for improved accuracy compared to baseline approaches.
+* The model uses fewer parameters and convolutional layers, making it efficient and memory-saving.
+Overall, the text presents a novel Hybrid CNN-LSTM model for SA that is efficient and achieves competitive performance. It also highlights the importance of reducing network size and memory consumption in NLP tasks.
+
+
